@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<!--head-->
+    <head>
+        <title>Menu</title>
+        <link rel="stylesheet" type="text/css" href="../css/Index.css"></link>
+    </head>
+<!--head ends-->
+<!-- body starts -->
+    <body class="Menupage">
+             <!-- header starts -->  
+            <div class= header>
+                <div class= "topNavBar">
+                    <ul>
+                    <li> <div id="Home" class="" onclick="window.location.href='Index.html '">Home</div></li>
+                    <li> <div id="Menu" class="active" onclick="window.location.href='Menu.html '">Menu</div></li>
+                    <li> <div id="Projects" class="" onclick="window.location.href='Project.html'"> Projects</div></li>                  
+                   <div class="logo"></div>  
+                    <li> <div id="About Us" class="" onclick="window.location.href='About.html'">About Us</div></li>
+                    <li> <div id="Contact us" class="" onclick="window.location.href='Contact.html'">Contacts Us</div></li>
+                    <li> <div id="Service" onclick="window.location.href='Service.html'">Service</div></li>    
+                    </ul>
+                </div>                
+            </div>
+            <!-- header ends-->
+             <!-- Section starts -->
+                <div class="SectionA">
+                    <div class="parentA"> <!-- TIME starts -->
+                        <div class="ABoxA">
+                            <canvas id="canvas" width="200" height="200">
+                            </canvas>
+                            
+                            <script>
+                            var canvas = document.getElementById("canvas");
+                            var ctx = canvas.getContext("2d");
+                            var radius = canvas.height / 2;
+                            ctx.translate(radius, radius);
+                            radius = radius * 0.90
+                            setInterval(drawClock, 1000);
+                            
+                            function drawClock() {
+                              drawFace(ctx, radius);
+                              drawNumbers(ctx, radius);
+                              drawTime(ctx, radius);
+                            }
+                            
+                            function drawFace(ctx, radius) {
+                              var grad;
+                              ctx.beginPath();
+                              ctx.arc(0, 0, radius, 0, 2*Math.PI);
+                              ctx.fillStyle = 'white';
+                              ctx.fill();
+                              grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+                              grad.addColorStop(0, '#333');
+                              grad.addColorStop(0.5, 'white');
+                              grad.addColorStop(1, '#333');
+                              ctx.strokeStyle = grad;
+                              ctx.lineWidth = radius*0.1;
+                              ctx.stroke();
+                              ctx.beginPath();
+                              ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+                              ctx.fillStyle = '#333';
+                              ctx.fill();
+                            }
+    
+                            function drawNumbers(ctx, radius) {
+                              var ang;
+                              var num;
+                              ctx.font = radius*0.15 + "px arial";
+                              ctx.textBaseline="middle";
+                              ctx.textAlign="center";
+                              for(num = 1; num < 13; num++){
+                                ang = num * Math.PI / 6;
+                                ctx.rotate(ang);
+                                ctx.translate(0, -radius*0.85);
+                                ctx.rotate(-ang);
+                                ctx.fillText(num.toString(), 0, 0);
+                                ctx.rotate(ang);
+                                ctx.translate(0, radius*0.85);
+                                ctx.rotate(-ang);
+                              }
+                            }
+                            
+                            function drawTime(ctx, radius){
+                                var now = new Date();
+                                var hour = now.getHours();
+                                var minute = now.getMinutes();
+                                var second = now.getSeconds();
+                                //hour
+                                hour=hour%12;
+                                hour=(hour*Math.PI/6)+
+                                (minute*Math.PI/(6*60))+
+                                (second*Math.PI/(360*60));
+                                drawHand(ctx, hour, radius*0.5, radius*0.07);
+                                //minute
+                                minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+                                drawHand(ctx, minute, radius*0.8, radius*0.07);
+                                // second
+                                second=(second*Math.PI/30);
+                                drawHand(ctx, second, radius*0.9, radius*0.02);
+                            }
+                            
+                            function drawHand(ctx, pos, length, width) {
+                                ctx.beginPath();
+                                ctx.lineWidth = width;
+                                ctx.lineCap = "round";
+                                ctx.moveTo(0,0);
+                                ctx.rotate(pos);
+                                ctx.lineTo(0, -length); 
+                                ctx.stroke();
+                                ctx.rotate(-pos);
+                            }
+                            </script>
+                            <div>
+                                <audio autoplay loop>
+                                    <source src="../pics/Coffee Music.m4a" type="audio/x-m4a">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                        </div>
+                            <div class="ABoxB">
+                                <div class="item">
+                                   <p>Location & Hours</p> 
+                                    Came in, relax and enjoy all we thave to
+                                    offer. Whether you are looking for a latte
+                                    fresh roasted beans or a perfect gift Find
+                                    a location nearest you!!
+                                </div>
+                                <div class="item">
+                                    <p>What's New?</p> 
+                                    This area could be used for the latest
+                                    news fed from the news page A great
+                                    place to announce pronotions and events.
+                                </div>
+                                <div class="item">
+                                    <p> MMC Newsetter</p> 
+                                    Stay informed about upcoming events and
+                                    money saving offers .
+                                </div>
+                            </div>
+                    </div>
+                    <div class="Menu">
+                        <div class="pm">Coffee</div>
+                        <div class="Mitem">
+                            <div class="Mbox">
+                                <div class="MPic" id="Espresso"></div>
+                                <div class="Mtxtbox">Espresso</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Cappuccino"></div>
+                                <div class="Mtxtbox">Cappuccino</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Flat"></div>
+                                <div class="Mtxtbox">Flat White</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Mocha"></div>
+                                <div class="Mtxtbox">Mocha</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Cortado"></div>
+                                <div class="Mtxtbox">Cortado</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Drip"></div>
+                                <div class="Mtxtbox">Drip Coffee</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Macchiato"></div>
+                                <div class="Mtxtbox">Macchiato</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Americano"></div>
+                                <div class="Mtxtbox">Americano</div>
+                            </div>
+                            <div class="pm">Breakfast</div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Croissant"></div>
+                                <div class="Mtxtbox">Croissant</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="French"></div>
+                                <div class="Mtxtbox">French Toast</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Salmon"></div>
+                                <div class="Mtxtbox">Salmon Panini</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Egg"></div>
+                                <div class="Mtxtbox">Egg Benedict</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Bagel"></div>
+                                <div class="Mtxtbox">Bagel</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Waffles"></div>
+                                <div class="Mtxtbox">Waffles</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Omelet"></div>
+                                <div class="Mtxtbox">Omelet</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Quiche"></div>
+                                <div class="Mtxtbox">Quiche</div>
+                            </div>                         
+                   
+                            <div class="pm">Desserts</div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Doughnut"></div>
+                                <div class="Mtxtbox">Doughnut</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Cheesecake"></div>
+                                <div class="Mtxtbox">Cheesecake</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Carrot"></div>
+                                <div class="Mtxtbox">Carrot Cake</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Muffin"></div>
+                                <div class="Mtxtbox">Muffin</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Tiramisu"></div>
+                                <div class="Mtxtbox">Tiramisu</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Eclair"></div>
+                                <div class="Mtxtbox">Eclair</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Cupcake"></div>
+                                <div class="Mtxtbox">Cupcake</div>
+                            </div>
+                            <div class="Mbox">
+                                <div class="MPic" id="Apple"></div>
+                                <div class="Mtxtbox">Apple Pie</div>
+                            </div>       
+                        </div>                                   
+                    </div>                         
+                </div>
+            </div> 
+            <!--Section ends -->
+            <!-- footer starts -->
+            <div class="footer">
+                <div class=insidefooter>
+                    <div class="footerboxA">
+                        <div class="logo"></div>
+                        <div class="topside">
+                            <div class="p">ADDRESS: 173 Block Garovillas <br>St. Etnalab Morong, Rizal</div> <br>
+                            <div class="p1" >Rian Carl N. Clemente<br>Original copyright ©</div>
+                        </div> 
+                    </div>
+                    <div class="footerboxB ">
+                        <div class="p" >FOLLOW US:</div>          
+                        <a class="followbox" id="facebook"  href="" ></a> 
+                        <a class="followbox" id="instagram" href="" ></a> 
+                        <a class="followbox" id="twitter"  href="" ></a> 
+                        <a class="followbox" id="google"  href="" ></a> 
+                        <a class="followbox" id="pinterest"  href="" ></a> 
+                        <a class="followbox" id="youtube"   href="" ></a>                      
+                    </div>
+                    <div class="footerboxC">
+                        <div class="p" >CONTACT:</div>
+                        <a class="contactbox" id="email" href="" ></a>
+                        <a class="contactbox" id="phone" href="" ></a>
+                        <a class="contactbox" id="line" href="" ></a>
+                    </div>
+                </div>
+            </div>
+            <!-- footers end -->
+    </body> 
+<!-- body ends -->
+</html>

@@ -1,0 +1,689 @@
+body{
+    width: 100%;
+    height: inherit;
+    margin: 0;
+    padding:0;
+    background-image: url("../pics/TBG.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 0%;
+    font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif; ;
+}
+.Menupage{
+    background-image: url("../pics/menu.jpg");
+    background-size: 100%;
+    background-position: 50% -165%;
+}
+.Projectpage{
+    background-image: url("../pics/project.jpg");
+    background-size: 100%;
+    background-position: 50% 0%;
+}
+.Aboutpage{
+    background-image: url("../pics/About Us.jpg");
+    background-size: 170%;
+    background-position: 45% -5%;
+} 
+.Contactpage{
+    background-image: url("../pics/contact1.jpg");
+    background-size: 100%;
+    background-position: 50% -5%;
+}
+.Servicepage{
+    background-image: url("../pics/service.jpg");
+    background-size: 120%;
+    background-position: 50% -35%;
+}
+/*the Header*/
+.header{
+    width: 100%;
+    height: 100px;
+    margin: 30px 0 0 0;
+    padding: 0;
+    align-self: center;
+    border-bottom: solid 1px gray;
+    position: sticky;
+    top: 0;
+    background: rgb(189,115,50);
+    background: linear-gradient(140deg, rgba(189,115,50,1) 6%, 
+    rgba(114,56,16,1) 14%, rgba(91,38,6,1) 33%, rgba(122,62,20,1) 40%, 
+    rgba(152,86,33,1) 47%, rgba(143,79,29,1) 55%, rgba(132,70,24,1) 60%, 
+    rgba(79,28,1,1) 73%, rgba(79,28,1,1) 89%, rgba(146,82,31,1) 100%);
+}
+.header .logo{
+    height: 150px;
+    width: 150px;
+    margin: 0 5px 0 5px;
+    background-image: url("../icons/MMC.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+.topNavBar ul {
+    width: 100%;
+    display:flex;
+    margin: 0 Auto 0 auto;
+    padding: 0;
+    justify-content: center;
+}
+.topNavBar ul li  {
+    /*to remove the bullets*/
+    display: inline-flex;  
+}
+.topNavBar ul li div{
+    height: 90px;
+    padding: 0 12px 0 12px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 160px;
+    font-size: 25px;
+    color:#EED49B;
+    cursor: pointer;
+    position: relative; /*for the underline*/
+}
+ /*Hover for the txt */
+.topNavBar ul li div::before{
+    content: '';
+    height: 3px;
+    background-color:#BD7B30;
+    width: 0;
+    position: absolute;
+    right:0px;
+    top:100%;
+    Transition: all .5s ease;
+}
+.topNavBar ul li div:hover::before{
+    width:100%;
+    left:0;
+}
+.topNavBar ul li div.active::before{
+    width:100%;
+    left:0;
+}
+/* body of the program*/
+.SectionA{ 
+   display: flex;
+    height: Auto;
+    width: 100%;
+    padding: 10px 5% 10px 5%;
+    margin: 42% 0 0 0;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    background-image: url("../pics/BG!.jpg");
+    background-size: 100%;
+}
+.parentA{
+    width: 400px;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto 0 auto;
+}
+.ABoxA{
+    justify-content: center;
+    display: flex;  
+    padding: 5px;
+}
+.ABoxB{
+    font-size: 20px;
+    margin: 20px 0 5px 0;
+}
+p{
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;
+    border-bottom: solid 1px green;
+} 
+.item{
+    border: solid 1px black;
+    padding: 0 5px 0 5px;
+    margin: 5px  5px 0;
+    border-radius: 5px;
+    background-color:#EED49B; 
+
+}
+.audio{
+    padding: 0 2% 0 auto;
+}
+.parentB{
+    height: auto;
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 3% 0 0 5%;
+    font-family: 'Sansita', sans-serif;   
+}
+.BBoxA
+{
+    width: auto;
+}
+.vidintro{
+    max-width: 100%; 
+    max-height: 100%;
+}
+h3 { 
+    font-family: "Sansita One"; 
+    font-size: 50px; 
+    font-style:oblique ;
+    font-weight: 700;  
+    padding: 0 0 0 30px;
+    text-align: center;
+} 
+.item1{
+    border-bottom: solid 1px gray;
+    display: flex;
+}
+.image0{
+    width: 40%;
+    height: 300px;
+    background-image: url("../pics/caffeine.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    align-self: center;
+    display: flex;
+    border-radius: 5px;
+    margin: 3%;
+}
+.image1{
+    width: 40%;
+    height: 300px;
+    background-image: url("../pics/pic1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    align-self: center;
+    display: flex;
+    border-radius: 5px;
+    margin: 3%;
+}
+.image2{
+    width: 40%;
+    height: 300px;
+    background-image: url("../pics/pic2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    align-self: center;
+    display: flex;
+    border-radius: 5px;
+    margin: 3%;
+}
+.txt{
+    width: 60%;
+    padding: 3%;  
+    color:#EED49B; 
+}
+
+/* menu */
+.Menu{
+    height: auto;
+    width: 90%;
+    font-size: 20px;
+    margin: 0 0 0 5%;
+    font-family: 'Sansita', sans-serif;  
+    text-align: center;
+}
+.pm{
+    font-family: "Sansita One"; 
+    font-size: 50px; 
+    font-style:oblique ;
+    font-weight: 700;  
+    line-height: 120px;
+    border-bottom: solid 1px gray;
+    width: auto;
+}
+.Mbox{
+    width: 240px;
+    height: 240px;
+    margin: 10px 5px 10px 5px;
+    box-sizing: border-box;
+    display: inline-table;
+    justify-content: center;
+    
+}
+.MPic{
+    height: 80%;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+.Mtxtbox{
+    height: 20%;
+    line-height: 50px;
+    border-bottom: solid 2px gray;
+    border-radius: 10px;
+    background-color:#EED49B;
+    margin-top: 2%;
+    font-style:italic;
+}
+#Espresso{
+    background-image: url("../pics/espresso.jpg");
+    background-size: 130%;
+    background-position: 80% 60%;
+}
+#Cappuccino{
+    background-image: url("../pics/cap.jpg");
+    background-size: 100%;
+    background-position: 50% 0%;
+}
+#Flat{
+    background-image: url("../pics/flat.jpg");
+    background-size: 170%;
+    background-position: 0% 90%;
+}
+#Mocha{
+    background-image: url("../pics/mocha.jpg");
+    background-size: 130%;
+    background-position: 50% 80%;
+}
+#Cortado{
+    background-image: url("../pics/Cortado.png");
+    background-size: 120%;
+    background-position: 50% 0%;
+}
+#Drip{
+    background-image: url("../pics/drip.jpg");
+    background-size: 120%;
+    background-position: 50% 0%;
+}
+#Macchiato{
+    background-image: url("../pics/maccahiato.jpg");
+    background-size: 130%;
+    background-position: 50% 40%;
+}
+#Americano{
+    background-image: url("../pics/americano.jpg");
+    background-size: 170%;
+    background-position: 90% 30%;
+}
+#Croissant{
+    background-image: url("../pics/croissant.jpg");
+    background-size: 120%;
+    background-position: 50% 0%;
+}
+#French{
+    background-image: url("../pics/french.jpg");
+    background-size: 130%;
+    background-position: 50% 20%;
+}
+#Salmon{
+    background-image: url("../pics/panini.jpg");
+    background-size: 120%;
+    background-position: 50% 0%;
+}
+#Egg{
+    background-image: url("../pics/egg.jpg");
+    background-size: 120%;
+    background-position: 50% 20%;
+}
+#Bagel{
+    background-image: url("../pics/Bagel.jfif");
+    background-size: 150%;
+    background-position: 50% 70%;
+}
+#Waffles{
+    background-image: url("../pics/Waffles.jpg");
+    background-size: 140%;
+    background-position: 80% 0%;
+}
+#Omelet{
+    background-image: url("../pics/Omelet.jpg");
+    background-size: 150%;
+    background-position: 50% 0%;
+}
+#Quiche{
+    background-image: url("../pics/Quiche.jfif");
+    background-size: 120%;
+    background-position: 50% 0%;
+}
+#Doughnut{
+    background-image: url("../pics/Doughnut.jpg");
+    background-size: 120%;
+    background-position: 50% 0%;
+}
+#Cheesecake{
+    background-image: url("../pics/Cheesecake.jfif");
+    background-size: 110%;
+    background-position: 50% 0%;
+}
+#Carrot{
+    background-image: url("../pics/Carrot.jpg");
+    background-size: 130%;
+    background-position: 0% 90%;
+}
+#Muffin{
+    background-image: url("../pics/Muffin.jpg");
+    background-size: 150%;
+    background-position: 50% 0%;
+}
+#Tiramisu{
+    background-image: url("../pics/Tiramisu.jpg");
+    background-size: 120%;
+    background-position: 50% 90%;
+}
+#Eclair{
+    background-image: url("../pics/Eclair.jpg");
+    background-size: 130%;
+    background-position: 90% 30%;
+}
+#Cupcake{
+    background-image: url("../pics/Cupcake.jpg");
+    background-size: 120%;
+    background-position: 50% 0%;
+}
+#Apple{
+    background-image: url("../pics/Apple Pie.jpg");
+    background-size: 150%;
+    background-position: 70% 0%;
+}
+/* Projects */
+.Project{
+    height: auto;
+    width: 90%;
+    font-size: 20px;
+    margin: 0 0 0 5%;
+    font-family: 'Sansita', sans-serif;  
+}
+.pp{
+    font-family: "Sansita One"; 
+    font-size: 50px; 
+    font-style:oblique ;
+    font-weight: 700;  
+    line-height: 120px;
+    width: auto;
+    text-align: center; 
+}
+.image{
+    width: 40%;
+    height: 200px;
+    align-self: center;
+    display: flex;
+    border-radius: 5px;
+    margin: 3%;
+}
+#image1{
+    background-image: url("../pics/store.jpg");
+    background-size: 100%;
+    background-position: 70% 0%;
+    background-repeat: no-repeat;
+}
+#image2{
+    background-image: url("../pics/coffee.jpg");
+    background-size: 100%;
+    background-position: 70% 0%;
+    background-repeat: no-repeat;
+}
+#image4{
+    background-image: url("../pics/bean.jpg");
+    background-size: 100%;
+    background-position: 70% 0%;
+    background-repeat: no-repeat;
+}
+#image5{
+    background-image: url("../pics/roast.jpg");
+    background-size: 100%;
+    background-position: 70% 0%;
+    background-repeat: no-repeat;
+}
+#image6{
+    background-image: url("../pics/grind.jpg");
+    background-size: 100%;
+    background-position: 70% 0%;
+    background-repeat: no-repeat;
+}
+#image7{
+    background-image: url("../pics/Decaf.jpg");
+    background-size: 100%;
+    background-position: 70% 0%;
+    background-repeat: no-repeat;
+}
+.Ptxt{
+    width: 60%;
+    padding: 3%;  
+    color:#EED49B; 
+}
+.Ptxtc{
+    width: 100%;
+    padding: 3%;  
+    color:#EED49B; 
+}
+/* about us */
+.About{
+    height: auto;
+    width: 90%;
+    box-sizing: border-box;
+    font-size: 20px;
+    margin: 0 0 0 5%;
+    font-family: 'Sansita', sans-serif;  
+}
+pa{
+    font-family: "Sansita One"; 
+    font-size: 50px; 
+    font-style:oblique ;
+    font-weight: 700;  
+    line-height: 120px;
+    border-bottom: solid 1px gray;
+    width: auto;
+    justify-content: center;
+    display: flex;
+}
+.AtextBox{
+    padding: 2%;
+    color:#EED49B; 
+}
+/* contact us */
+.Contact{
+    height: auto;
+    width: 90%;
+    font-size: 20px;
+    margin: 0 0 0 5%;
+    font-family: 'Sansita', sans-serif;  
+    text-align: center;
+}
+.pc{
+    font-family: "Sansita One"; 
+    font-size: 50px; 
+    font-style:oblique ;
+    font-weight: 700;  
+    margin: 0 0 10% 0;
+    line-height: 120px;
+    border-bottom: solid 1px gray;
+    width: auto;  
+}
+#EmailAdd{
+    background-image: url("../icons/email.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: inherit;
+}
+#Phoneline{
+    background-image: url("../icons/phone.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: inherit;
+}
+#Telephone{
+    background-image: url("../icons/line.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: inherit;
+}
+/* service */
+#Dine-in{
+    background-image: url("../icons/dineIn.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: inherit;
+}
+#Take-Ou{
+    background-image: url("../icons/takeOut.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: inherit;
+}
+#Drive-Thru{
+    background-image: url("../icons/drive.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: inherit;
+}
+#Order{
+    background-image: url("../icons/order.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: inherit;
+}
+#App{
+    background-image: url("../icons/app.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: inherit;
+}
+#MMC{
+    background-image: url("../icons/Web.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: inherit;
+}
+
+
+
+/*the footer */
+.footer{
+    box-sizing: border-box;
+    background-image: url("../pics/footer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 45%;
+}
+.insidefooter{
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: flex; 
+    height: 300px;
+    Padding: 2% 5% 0 5% ;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+}
+.footerboxA{
+    align-items: center;
+    box-sizing: border-box;
+    display: flex; 
+    height: 90%;
+    width: auto;
+    border-left: solid 1px grey;
+    Padding:  2% 0 0 2%;
+}
+.footerboxB, .footerboxC{
+    box-sizing: border-box;
+    text-align: center;
+    height: 90%;
+    width: 21%;
+    border-left: solid 1px grey;
+    Padding:  2% 0 2% 2%;
+}
+.footerboxA .logo{
+    height: 250px;
+    width: 250px;
+    background-image: url("../icons/MMC.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+.p{
+    color:#EED49B;
+    font-size: 20px;
+}
+.p1{
+    color:#EED49B; 
+    font-size: 20px;
+}
+.followbox {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    margin: 10px 20px 10px 0;
+    display: inline-block;
+    border-radius: 5px;
+}
+/*icon for following us*/
+#facebook{
+    background-image: url("../icons/facebook.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#instagram{
+    background-image: url("../icons/instagram.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#twitter{
+    background-image: url("../icons/twitter.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#google{
+    background-image: url("../icons/google.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}#pinterest{
+    background-image: url("../icons/pinterest.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#youtube{
+    background-image: url("../icons/youtube.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.contactbox {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    margin: 10px 20px 10px 0;
+    display: inline-block;
+    border-radius: 5px;
+}
+#email{
+    background-image: url("../icons/email.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#phone{
+    background-image: url("../icons/phone.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#line{
+    background-image: url("../icons/line.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+/*for the scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #EED49B;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #975B29;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+        background: rgba(0,0,0,0.4)
+    }
+
+
+@media only screen and (orientation: portrait){
+    .box {width: 85.5%;
+    }
+
+}
+@media only screen and (orientation: landscape) {
+    .box {width: 86%;
+    }
+}
